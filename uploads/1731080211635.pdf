@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced CV Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <h2>Login or Signup</h2>
+            <form id="signupForm">
+                <input type="text" id="signupName" placeholder="Enter your name" required>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                <input type="password" id="signupPassword" placeholder="Enter your password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="authMessage" class="message"></p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="/images/logo.jpeg" class="center" alt="Role">
+        <h1>UNFORTUNATE CV</h1>
+        <div id="uploadSection">
+            <h2>Upload Your CV for Review</h2>
+            <form id="cvForm">
+                <input type="file" id="cvFile" accept=".pdf,.doc,.docx,.txt" required>
+                <textarea id="description" placeholder="Describe your CV experience" required></textarea>
+                <button type="submit">Upload CV</button>
+            </form>
+            <h1 class="h1">WARNING!!!</h1>
+            <h6>PLEASE DO NOT UPLOAD CV WITH PERSONAL DETAILS</h6>
+        </div>
+        <div class="cv-container">
+            <div id="cvList" class="cv-list"></div>
+        </div>
+        <div id="cvModal" class="cv-modal">
+            <div class="cv-modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <iframe id="fullCvIframe" class="cv-iframe"></iframe>
+                <div id="modalComments" class="modal-comments"></div>
+                <div>
+                    <input type="text" id="newComment" placeholder="Add a comment...">
+                    <button onclick="addModalComment()">Submit</button>
+                </div>
+                <button onclick="likeCv()">Like</button>
+                <p id="likeCount"></p>
+                <button onclick="downloadCv()">Download CV</button>
+            </div>
+        </div>
+    <script src="script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

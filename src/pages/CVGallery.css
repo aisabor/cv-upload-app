@@ -1,0 +1,75 @@
+.cv-gallery {
+    padding: 20px;
+}
+
+.cv-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cv-gallery h2 {
+    text-align: center;
+}
+
+.cv-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 300px;
+}
+
+.cv-gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+.cv-item h3 {
+    font-size: 1.2em;
+}
+
+.cv-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cv-item button:hover {
+    background-color: #0056b3;
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comments-section form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.comments-section button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comments-section button:hover {
+    background-color: #218838;
+}

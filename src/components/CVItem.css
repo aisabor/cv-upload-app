@@ -1,0 +1,121 @@
+.cv-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 300px;
+}
+
+.cv-gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.cv-item:hover {
+    transform: scale(1.05);
+}
+
+.cv-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #f4f4f4;
+}
+
+.cv-header p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.cv-details {
+    margin-top: 10px;
+}
+
+/* Styling for file container */
+.cv-file-container {
+    margin-top: 10px;
+    border: 1px solid #444; /* Border around the file */
+    border-radius: 8px;
+    background-color: #1f1f1f; /* Background color */
+    padding: 10px; /* Padding around the file */
+    max-width: 100%; /* Ensure container doesn't overflow */
+    overflow: hidden;
+}
+
+/* Styles for embedded files (PDF or image) */
+.cv-file-container iframe,
+.cv-file-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Comments section styling */
+.cv-comments {
+    margin-top: 15px;
+    color: #ddd;
+}
+
+.cv-comments h4 {
+    font-size: 1.1rem;
+    color: #e1e1e1;
+}
+
+.cv-comments ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.cv-comments li {
+    padding: 8px;
+    background-color: #333333;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+/* Comment input styling */
+.cv-comments textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border: 1px solid #444;
+    resize: none;
+}
+
+.cv-comments button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cv-comments button:hover {
+    background-color: #218838;
+}
+
+/* Like button styling */
+.like-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.like-button:hover {
+    background-color: #0056b3;
+}
